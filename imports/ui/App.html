@@ -4,6 +4,8 @@
             <h1>To Do List</h1>
         </header>
 
+        {{>form}}
+
         <ul>
             {{#each tasks}}
                 {{> task}}
@@ -14,4 +16,11 @@
 
 <template name="task">
     <li>{{text}}</li>
+</template>
+
+<template name="form">
+    <form class="task-form">
+        <input type="text" name="text" placeholder="Add new task"/>
+        <button type="submit">Add task</button>
+    </form>
 </template>
